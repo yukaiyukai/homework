@@ -66,26 +66,11 @@ bool myCmp::operator()(const studData &d1, const studData &d2)
 {
     bool result = false;
     quint32 sortedColumn = 0x00000001<<currentColumn;
-    switch (sortedColumn) {
-        case SK::col01:result=compare(1);break;
-        case SK::col02:result=compare(2);break;
-        case SK::col03:result=compare(3);break;
-        case SK::col04:result=compare(4);break;
-        case SK::col05:result=compare(5);break;
-        case SK::col06:result=compare(6);break;
-        case SK::col07:result=compare(7);break;
-        case SK::col08:result=compare(8);break;
-        case SK::col09:result=compare(9);break;
-        case SK::col10:result=compare(10);break;
-        case SK::col11:result=compare(11);break;
-        case SK::col12:result=compare(12);break;
-        case SK::col13:result=compare(13);break;
-        case SK::col14:result=compare(14);break;
-        case SK::col15:result=compare(15);break;
-        case SK::col16:result=compare(16);break;
-        default:;break;
-    }
+    result=(d1.stu.at(currentColumn)>d2.stu.at(currentColumn));
     return result;
+   // switch (sortedColumn) {
+   // case SK::col01:result=compare(1);break;
+   // return result;
 
 }
 
@@ -148,16 +133,29 @@ void ScoreSorter::doSort()
 
 }
 
-//void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+{
+    Q_UNUSED(type);
+    Q_UNUSED(context);
+    QFile f("D:/GitHub/homework/homework02/sorted_data.txt");
+    f.open(QIODevice::ReadWrite | QIODevice::Append);
+    QTextStream out(&f);
+    out<<msg<<endl;
+    out.setCodec("UTF-8");
+    f.flush();
+    f.close();
+    QTextStream td(stdout);
+    td << msg<<endl;
     // 自定义qDebug
+}
 
 int main()
 {
-    //qInstallMessageHandler(myMessageOutput);
+    qInstallMessageHandler(myMessageOutput);
     QString datafile = "D:/GitHub/homework/homework02/data.txt";
 
     // 如果排序后文件已存在，则删除之
-    QFile f("sorted_"+datafile);
+    QFile f("D:/GitHub/homework/homework02/sorted_data.txt");//+datafile
     if (f.exists()){
         f.remove();
     }
