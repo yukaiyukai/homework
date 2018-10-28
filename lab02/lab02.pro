@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-10-24T17:12:30
+# Project created by QtCreator 2018-10-28T14:32:38
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = shiyan2
+TARGET = lab02
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -35,8 +35,7 @@ HEADERS += \
     common.h \
     drawwidget.h
 
-FORMS += \
-        mainwindow.ui
-
 RESOURCES += \
-    picture.qrc
+    pic.qrc
+
+DISTFILES +=

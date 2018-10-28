@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file alias="wjx">20070819225231468.jpg</file>
         <file>taiyang.jpg</file>
     </qresource>
 </RCC>

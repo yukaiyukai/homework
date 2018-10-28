@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include <common.h>
 #include <QToolBar>
 #include <QColorDialog>

@@ -1,4 +1,4 @@
-#ifndef DRAWWIDGET_H
+﻿#ifndef DRAWWIDGET_H
 #define DRAWWIDGET_H
 #include <common.h>
 #include <QWidget>

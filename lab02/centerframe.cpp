@@ -1,4 +1,4 @@
-#include "centerframe.h"
+﻿#include "centerframe.h"
 #include "drawwidget.h"
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -9,6 +9,7 @@
 #include <QGridLayout>
 #include <QLineEdit>
 #include <QDebug>
+
 
 CenterFrame::CenterFrame(QWidget *parent) : QFrame(parent)
 {
@@ -156,8 +157,8 @@ void CenterFrame::createUserCommandArea()
     gridLayout->addWidget(btnEllipse,0,1);
     gridLayout->addWidget(btnTriangle,1,0);
     gridLayout->addWidget(btnLine,1,1);
-    gridLayout->addWidget(btnText,2,0);
-    gridLayout->addWidget(btnDiamond,2,1);
+    gridLayout->addWidget(btnText,2,1);
+    gridLayout->addWidget(btnDiamond,2,0);
     gridLayout->addWidget(btnDrawpic,3,0);
     gridLayout->setMargin(3);
     gridLayout->setSpacing(3);
