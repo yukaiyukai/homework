@@ -55,8 +55,8 @@ private:
     QPushButton* btnEllipse;
     QPushButton* btnLine;
     QPushButton* btnTriangle;
-    QPushButton* btnText;
     QPushButton* btnDiamond;
+    QPushButton* btnText;
     QPushButton* btnDrawpic;
     QLineEdit* edtText;
 

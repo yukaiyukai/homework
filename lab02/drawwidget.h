@@ -36,7 +36,7 @@ public slots:
     void setWidth(int);
     void setColor(QColor);
     void clear();
-    void drawpic();
+    void drawpic(); //添加图片
 
 private :
     QPixmap *pix;
