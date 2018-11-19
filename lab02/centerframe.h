@@ -1,4 +1,4 @@
-﻿#ifndef CENTERFRAME_H
+#ifndef CENTERFRAME_H
 #define CENTERFRAME_H
 #include <QFrame>
 #include <common.h>

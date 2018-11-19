@@ -1,4 +1,4 @@
-﻿#include "drawwidget.h"
+#include "drawwidget.h"
 #include <QMouseEvent>
 #include <QPen>
 #include <QMessageBox>

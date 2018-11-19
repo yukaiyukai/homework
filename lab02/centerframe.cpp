@@ -1,4 +1,4 @@
-﻿#include "centerframe.h"
+#include "centerframe.h"
 #include "drawwidget.h"
 #include <QVBoxLayout>
 #include <QHBoxLayout>
